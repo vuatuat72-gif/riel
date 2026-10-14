@@ -16,6 +16,8 @@ This project is made with **HTML, CSS, and JavaScript** and includes animations,
 ## 🎁 Features   
 - 💌 Heartfelt birthday message with typewriter effect  
 - 🌟 Responsive design (works on phone & desktop)  
+- 🎵 `inlove.mp3` background music with an on/off toggle and uninterrupted playback across story pages  
+- 💕 Floating heart animations on every page  
 - ✨ Easy to customize for anyone  
 
 ---

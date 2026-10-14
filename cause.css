@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none;
 }
 
 body {
@@ -15,22 +14,6 @@ body {
     font-family: 'Quicksand', sans-serif;
     overflow-x: hidden;
     padding: 2rem;
-}
-
-.custom-cursor {
-    width: 30px;
-    height: 30px;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    mix-blend-mode: difference;
-    transition: transform 0.1s;
-}
-
-.custom-cursor svg {
-    width: 100%;
-    height: 100%;
-    filter: drop-shadow(0 0 5px rgba(255, 182, 193, 0.5));
 }
 
 .container {

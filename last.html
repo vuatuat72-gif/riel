@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Những kỷ niệm đẹp của cậu✨</title>
+    <title>lời động viên và lời chúc của tớ.✨</title>
+    <link rel="stylesheet" href="./music.css">
+    <link rel="stylesheet" href="./floating-hearts.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@300;400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap');
 
         * {
             margin: 0;
@@ -24,7 +26,7 @@
                     #ffd1dc 100%);
             background-size: 400% 400%;
             animation: gradientFlow 15s ease infinite;
-            font-family: 'Quicksand', sans-serif;
+            font-family: 'Be Vietnam Pro', sans-serif;
             overflow-x: hidden;
             color: #4a4a4a;
         }
@@ -106,33 +108,6 @@
             }
         }
 
-        /* Floating Hearts */
-        .floating-hearts {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 2;
-        }
-
-        .heart {
-            position: absolute;
-            font-size: 1.5rem;
-            color: rgba(255, 105, 180, 0.6);
-            animation: floatHeart var(--float-duration, 6s) ease-in-out infinite;
-            animation-delay: var(--delay, 0s);
-        }
-
-        @keyframes floatHeart {
-            0% {
-                transform: translate(0, 100vh) rotate(0deg);
-            }
-
-            100% {
-                transform: translate(var(--translate-x, 0), -100vh) rotate(360deg);
-            }
-        }
-
         /* Welcome Section */
         .welcome {
             text-align: center;
@@ -142,7 +117,7 @@
         }
 
         .welcome h1 {
-            font-family: 'Dancing Script', cursive;
+            font-family: 'Be Vietnam Pro', sans-serif;
             font-size: 4rem;
             color: #ff69b4;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -214,7 +189,7 @@
         }
 
         .memory-date {
-            font-family: 'Dancing Script', cursive;
+            font-family: 'Be Vietnam Pro', sans-serif;
             color: #ff69b4;
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
@@ -238,7 +213,7 @@
         }
 
         .final-message h2 {
-            font-family: 'Dancing Script', cursive;
+            font-family: 'Be Vietnam Pro', sans-serif;
             font-size: 3rem;
             color: #ff69b4;
             margin-bottom: 2rem;
@@ -360,31 +335,27 @@
 </head>
 
 <body>
-    <div class="magic-sparkles"></div>
-    <div class="floating-hearts">
-        <!-- Hearts will be generated via CSS -->
-        <div class="heart" style="--float-duration: 6s; --delay: 0s; --translate-x: 20px;">💝</div>
-        <div class="heart" style="--float-duration: 8s; --delay: 1s; --translate-x: -30px;">💖</div>
-        <div class="heart" style="--float-duration: 7s; --delay: 2s; --translate-x: 40px;">💗</div>
-        <div class="heart" style="--float-duration: 9s; --delay: 3s; --translate-x: -20px;">💓</div>
-        <div class="heart" style="--float-duration: 5s; --delay: 4s; --translate-x: 30px;">💕</div>
+    <audio id="background-music" src="./inlove.mp3" preload="none"></audio>
+    <div class="music-controls">
+        <button class="music-toggle" type="button" aria-pressed="false">♫ Bật nhạc</button>
+        <span class="music-status" aria-live="polite"></span>
     </div>
-
+    <div class="magic-sparkles"></div>
     <section class="welcome">
-        <h1>những khoảng khắc đẹp của cậu.💓</h1>
-        <p>những khoẳng khắc đáng nhớ trong cuộc đời của cậu.</p>
+        <h1>Encouragement card for my princess.</h1>
+        <p>lời chúc của tớ dành cho cậu.💕</p>
     </section>
 
     <div class="memory-container">
         <div class="memory-card">
             <img src="./d1.jpg" alt="First Date" class="memory-img">
-            <div class="memory-date">cậu hãy luôn mỉm cười nhé.</div>
-            <div class="memory-caption">một nụ cười bằng mười thang thuốc bổ đó.❤️</div>
+            <div class="memory-date">cậu hãy luôn mỉm cười nha.</div>
+            <div class="memory-caption">vì một nụ cười bằng mười thang thuốc bổ đó.❤️</div>
         </div>
         <div class="memory-card">
             <img src="./d2.jpg" alt="Beach Day" class="memory-img">
-            <div class="memory-date">hãy luôn cố gắng nhé.</div>
-            <div class="memory-caption">hãy hoàn thiện bản thân mình nhé bớt ngại lại đi.😊💕</div>
+            <div class="memory-date">hãy luôn cố gắng và kiên trì.</div>
+            <div class="memory-caption">hãy hoàn thiện bản thân mình nhé bớt ngại hơn nha.😊💕</div>
         </div>
         <div class="memory-card">
             <img src="./d3.jpg" alt="Movie Night" class="memory-img">
@@ -402,6 +373,8 @@
         <p>học giỏi hơn và đạt được nhiều thành tích mong muốn nhé.✨</p>
         <a href="#" class="goodbye-btn">lần nữa 💝</a>
     </section>
+    <script src="./music.js"></script>
+    <script src="./floating-hearts.js"></script>
 </body>
 
 </html>

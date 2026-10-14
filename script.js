@@ -1,10 +1,3 @@
-// Cursor following effect
-const cursor = document.querySelector('.cursor');
-document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-});
-
 // Typing effect for greeting
 const greetingText = "này cậu biết không cậu là người tuyệt nhất tớ từng gặp.💖";
 const greetingElement = document.querySelector('.greeting');
@@ -84,11 +77,13 @@ window.addEventListener('load', () => {
 
         // Smooth page transition on click
         button.addEventListener('click', () => {
-            gsap.to('body', {
+            gsap.to('.container', {
                 opacity: 0,
                 duration: 1,
                 onComplete: () => {
-                    window.location.href = 'cause.html'; // Replace with the actual URL of the next page
+                    const storyFrame = document.querySelector('#story-frame');
+                    storyFrame.src = 'cause.html';
+                    storyFrame.hidden = false;
                 }
             });
         });
