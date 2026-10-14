@@ -1,67 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>riel</title>
-    <style>
-      :root {
-        --bg: #0f172a;
-        --card: #111827;
-        --text: #e5e7eb;
-        --muted: #94a3b8;
-        --accent: #38bdf8;
-      }
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        background: linear-gradient(135deg, var(--bg), #1e293b);
-        color: var(--text);
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      .card {
-        width: min(720px, 90vw);
-        background: rgba(17, 24, 39, 0.9);
-        border: 1px solid rgba(148, 163, 184, 0.25);
-        border-radius: 16px;
-        padding: 40px 32px;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
-      }
-      h1 {
-        margin: 0 0 16px;
-        font-size: clamp(2rem, 4vw, 3rem);
-      }
-      p {
-        color: var(--muted);
-        line-height: 1.7;
-        margin: 0 0 20px;
-      }
-      .badge {
-        display: inline-block;
-        background: rgba(56, 189, 248, 0.12);
-        color: var(--accent);
-        border: 1px solid rgba(56, 189, 248, 0.4);
-        padding: 8px 12px;
-        border-radius: 999px;
-        font-size: 0.9rem;
-        margin-bottom: 18px;
-      }
-    </style>
-  </head>
-  <body>
-    <main class="card">
-      <div class="badge">GitHub Pages</div>
-      <h1>Trang web của repo riel</h1>
-      <p>
-        Đây là trang mẫu để khắc phục lỗi 404 trên GitHub Pages. Repo này hiện đang có Pages được bật,
-        nhưng chưa có file HTML nào để nuôi trang, nên trình duyệt sẽ hiển thị lỗi 404.
-      </p>
-      <p>
-        Bạn có thể thay nội dung này bằng trang web thật của mình sau khi hoàn tất dự án.
-      </p>
-    </main>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="music.css">
+    <link rel="stylesheet" href="floating-hearts.css">
+    
+</head>
+<body>
+    <audio id="background-music" src="./inlove.mp3" preload="metadata"></audio>
+    <div class="music-controls">
+        <button class="music-toggle" type="button" aria-pressed="false">♫ Bật nhạc</button>
+        <span class="music-status" aria-live="polite"></span>
+    </div>
+    <iframe id="story-frame" class="story-frame" title="Birthday story" hidden></iframe>
+    <div class="container">
+        <h1>Happy Birthday Phượng 💗</h1>
+        <div class="greeting"></div>
+        <button class="cta-button">đi vào phần chính nhé.💕</button>
+    </div>
+
+    <script src="music.js"></script>
+    <script src="floating-hearts.js"></script>
+    <script src="script.js">
+        
+    </script>
+</body>
 </html>
